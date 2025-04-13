@@ -1,0 +1,84 @@
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/capa.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.card, .about-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover, .about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.about-section {
+    background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
+}
+/* Menu Hambúrguer */
+#menu-toggle {
+    display: none;
+}
+#menu {
+    transition: transform 0.3s ease-in-out;
+}
+#menu-toggle:checked ~ #menu {
+    transform: translateX(0);
+}
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+    .nav-links {
+        display: none;
+    }
+    #menu {
+        transform: translateX(100%);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 75%;
+        background: #1f2937;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 20;
+    }
+}
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+    }
+}

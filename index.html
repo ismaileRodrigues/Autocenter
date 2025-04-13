@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Auto Center Moderno</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+   
+   
+</head>
+<body class="bg-gray-100">
+    <!-- Cabeçalho -->
+    <header class="bg-gray-900 text-white fixed w-full top-0 z-10 py-4 px-4 sm:px-6 flex justify-between items-center">
+        <img src="/img/logo.png" alt="Logo Auto Center" class="h-10 sm:h-12">
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <label for="menu-toggle" class="menu-icon">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </label>
+        <nav id="menu" class="nav-links flex space-x-4 sm:space-x-6">
+            <a href="#home" class="hover:text-orange-400 transition text-base sm:text-lg">Home</a>
+            <a href="#sobre" class="hover:text-orange-400 transition text-base sm:text-lg">Sobre</a>
+            <a href="#servicos" class="hover:text-orange-400 transition text-base sm:text-lg">Serviços</a>
+            <a href="#agendamento" class="hover:text-orange-400 transition text-base sm:text-lg">Agendamento</a>
+            <a href="#contato" class="hover:text-orange-400 transition text-base sm:text-lg">Contato</a>
+        </nav>
+        <a href="#agendamento" class="hidden sm:block bg-orange-400 text-black px-3 py-2 rounded-full hover:bg-orange-500 transition text-sm sm:text-base">Agende Agora</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+        <div class="px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Seu Carro, Nossa Paixão!</h1>
+            <p class="text-base sm:text-lg md:text-xl mb-6">Serviços automotivos com tecnologia de ponta e atendimento premium.</p>
+            <a href="#agendamento" class="bg-orange-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-orange-500 transition">Agendar Serviço</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="py-12 sm:py-16 px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12" data-aos="fade-up">Nossos Serviços</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div class="card bg-white p-4 sm:p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">Troca de Óleo</h3>
+                <p class="text-sm sm:text-base text-gray-600">Rápida, confiável e com óleos premium.</p>
+            </div>
+            <div class="card bg-white p-4 sm:p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">Alinhamento 3D</h3>
+                <p class="text-sm sm:text-base text-gray-600">Tecnologia avançada para direção perfeita.</p>
+            </div>
+            <div class="card bg-white p-4 sm:p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">Funilaria e Pintura</h3>
+                <p class="text-sm sm:text-base text-gray-600">Seu carro como novo, com acabamento impecável.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre, Missão, Visão e Valores -->
+    <section id="sobre" class="about-section py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Sobre -->
+            <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Sobre Nós</h2>
+                <p class="text-base sm:text-lg text-gray-700">
+                    Fundado em 2010, o Auto Center é apaixonado por cuidar do seu carro com excelência. Nossa equipe de profissionais qualificados utiliza tecnologia de ponta para garantir que seu veículo receba o melhor atendimento, com transparência e confiança.
+                </p>
+            </div>
+
+            <!-- Missão, Visão e Valores -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="about-card bg-white p-4 sm:p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-orange-400">Missão</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Oferecer serviços automotivos de alta qualidade, com transparência e confiança, garantindo a satisfação total dos nossos clientes.</p>
+                </div>
+                <div class="about-card bg-white p-4 sm:p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-orange-400">Visão</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Ser a referência em manutenção veicular na nossa região, unindo tecnologia avançada e atendimento excepcional.</p>
+                </div>
+                <div class="about-card bg-white p-4 sm:p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-orange-400">Valores</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Qualidade, Honestidade, Inovação e Respeito ao Cliente são os pilares que guiam nosso trabalho todos os dias.</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="#servicos" class="bg-orange-400 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-orange-500 transition">Conheça Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-btn" data-aos="fade-up">
+        <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.548 4.138 1.582 5.93L0 24l6.254-1.645A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.154 16.322c-.267.8-.998 1.463-1.834 1.66-.73.172-1.678.038-2.994-.678-2.528-1.376-4.144-3.678-4.267-3.856-.122-.177-.994-1.446-1.002-2.756 0-1.013.533-1.51.8-1.734.267-.223.578-.334.89-.334.178 0 .356.022.512.044.178.022 1.112-.412 1.29-.334.177.078.312.356.445.667.133.312.445 1.024.534 1.202.088.178.156.356-.022.578-.178.223-.334.356-.512.534-.178.177-.356.334-.156.667.2.334.89 1.112 1.912 1.834 1.29.912 2.316 1.224 2.65 1.335.334.111.667.089.89-.089.223-.178.578-.667.801-.89.223-.223.445-.178.623-.089.178.089.356.445.534.667.178.223.356.445.267.734z"/>
+        </svg>
+    </a>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-6 sm:py-8 text-center">
+        <p class="text-sm sm:text-base">Auto Center © 2025 | <a href="tel:+5511999999999">(11) 99999-9999</a> | Rua Exemplo, 123, Cidade</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
