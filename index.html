@@ -3,119 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Auto Center Moderno</title>
-    <meta name="description" content="Auto Center: serviços automotivos premium com qualidade, tecnologia e atendimento especializado.">
+    <title>Auto Center | Serviços Automotivos Premium</title>
+    <meta name="description" content="Auto Center: manutenção automotiva premium, alinhamento, balanceamento, troca de óleo e serviços completos para seu veículo.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 text-gray-800 antialiased">
+<body>
     <header class="site-header">
-        <div class="max-w-6xl mx-auto flex items-center justify-between gap-4 px-4 sm:px-6">
-            <a href="#home" class="brand" aria-label="Auto Center">
-                <img src="/img/logo.png" alt="Logo Auto Center" class="h-10 sm:h-12">
+        <div class="container nav-container">
+            <a href="#home" class="brand" aria-label="Auto Center home">
+                <img src="/img/logo.png" alt="Logo Auto Center" class="brand-logo">
             </a>
 
-            <input type="checkbox" id="menu-toggle" class="hidden">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </label>
 
             <nav id="menu" class="nav-links" aria-label="Menu principal">
                 <a href="#home">Home</a>
-                <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#depoimentos">Depoimentos</a>
                 <a href="#agendamento">Agendamento</a>
                 <a href="#contato">Contato</a>
             </nav>
 
-            <a href="#agendamento" class="btn btn-primary hidden sm:inline-flex">Agende Agora</a>
+            <a href="#agendamento" class="btn btn-primary hidden-mobile">Agende Agora</a>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero" data-aos="fade-up">
-            <div class="hero-content">
-                <span class="hero-badge">Atendimento premium</span>
-                <h1>Seu Carro, Nossa Paixão!</h1>
-                <p>Serviços automotivos com tecnologia de ponta, qualidade comprovada e atendimento que valoriza cada cliente.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#agendamento" class="btn btn-primary">Agendar Serviço</a>
-                    <a href="#servicos" class="btn btn-secondary">Conhecer Serviços</a>
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy" data-aos="fade-up">
+                    <span class="hero-badge">Atendimento premium</span>
+                    <h1>Seu carro merece cuidado profissional.</h1>
+                    <p>
+                        Soluções completas em manutenção automotiva com tecnologia moderna,
+                        atendimento especializado e qualidade que você pode confiar.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#agendamento" class="btn btn-primary">Agendar Serviço</a>
+                        <a href="#servicos" class="btn btn-secondary">Conhecer Serviços</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <strong>+12</strong>
+                            <span>Anos de experiência</span>
+                        </div>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Satisfação dos clientes</span>
+                        </div>
+                        <div>
+                            <strong>+2.5k</strong>
+                            <span>Veículos atendidos</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="servicos" class="section-spacing">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="container">
                 <div class="section-heading" data-aos="fade-up">
                     <span class="section-kicker">Especialidades</span>
                     <h2>Nossos Serviços</h2>
+                    <p>Trabalhamos com precisão, qualidade e atenção para manter seu veículo sempre em excelente estado.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="services-grid">
                     <article class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-icon">⚙️</div>
                         <h3>Troca de Óleo</h3>
-                        <p>Rápida, segura e realizada com produtos de alto desempenho para preservar o motor do seu veículo.</p>
+                        <p>Procedimento rápido e seguro, com fluidos premium para preservar o desempenho do motor.</p>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="service-icon">🎯</div>
+                        <h3>Alinhamento 3D</h3>
+                        <p>Precisão total para maior estabilidade, economia de pneus e conforto na direção.</p>
                     </article>
 
                     <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon">🎯</div>
-                        <h3>Alinhamento 3D</h3>
-                        <p>Tecnologia avançada para maior estabilidade, economia de pneus e direção mais confortável.</p>
+                        <div class="service-icon">🛠️</div>
+                        <h3>Freios</h3>
+                        <p>Diagnóstico e manutenção de sistemas de frenagem para segurança máxima em cada viagem.</p>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="service-icon">🎨</div>
+                        <h3>Funilaria e Pintura</h3>
+                        <p>Acabamento impecável para devolver a aparência original e a personalidade do seu veículo.</p>
                     </article>
 
                     <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon">🎨</div>
-                        <h3>Funilaria e Pintura</h3>
-                        <p>Restauro visual impecável com acabamento profissional para devolver o brilho e a identidade do seu carro.</p>
+                        <div class="service-icon">🔧</div>
+                        <h3>Manutenção Geral</h3>
+                        <p>Revisão completa para evitar problemas, aumentar a vida útil e garantir desempenho confiável.</p>
                     </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="service-icon">🚗</div>
+                        <h3>Diagnóstico Automotivo</h3>
+                        <p>Teste técnico com equipamentos modernos para identificar falhas com rapidez e precisão.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-band">
+            <div class="container feature-grid">
+                <div class="feature-item" data-aos="fade-up">
+                    <span class="feature-number">01</span>
+                    <h3>Qualidade comprovada</h3>
+                    <p>Produtos e processos que respeitam os mais altos padrões do setor automotivo.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="feature-number">02</span>
+                    <h3>Atendimento humano</h3>
+                    <p>Equipes preparadas para orientar com clareza, respeito e profissionalismo.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="feature-number">03</span>
+                    <h3>Transparência</h3>
+                    <p>Comunicação objetiva, orçamentos claros e acompanhamento do serviço realizado.</p>
                 </div>
             </div>
         </section>
 
         <section id="sobre" class="about-section section-spacing">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="text-center mb-10" data-aos="fade-up">
+            <div class="container">
+                <div class="section-heading section-heading-centered" data-aos="fade-up">
                     <span class="section-kicker">Quem somos</span>
-                    <h2>Sobre Nós</h2>
-                    <p class="about-intro">
-                        Fundado em 2010, o Auto Center é apaixonado por cuidar do seu carro com excelência. Nossa equipe de profissionais qualificados utiliza tecnologia de ponta para garantir que cada veículo receba atenção e cuidado dedicados.
-                    </p>
+                    <h2>Excelência em cada detalhe</h2>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    <article class="about-card" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Missão</h3>
-                        <p>Oferecer serviços automotivos de alta qualidade, com transparência e confiança, garantindo a satisfação total dos nossos clientes.</p>
-                    </article>
+                <div class="about-layout">
+                    <div class="about-image" data-aos="fade-right">
+                        <div class="image-card">
+                            <img src="/img/capa.png" alt="Oficina Auto Center" />
+                        </div>
+                    </div>
 
-                    <article class="about-card" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Visão</h3>
-                        <p>Ser a referência em manutenção veicular da região, combinando tecnologia avançada e atendimento excepcional.</p>
-                    </article>
+                    <div class="about-content" data-aos="fade-left">
+                        <p>
+                            Fundada em 2010, a Auto Center nasceu para oferecer serviços automotivos com excelência,
+                            confiabilidade e inovação. Nossa missão é cuidar do seu veículo como se fosse nosso,
+                            proporcionando segurança, economia e uma experiência de alto padrão.
+                        </p>
 
-                    <article class="about-card" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Valores</h3>
-                        <p>Qualidade, honestidade, inovação e respeito ao cliente são os pilares que orientam cada atendimento.</p>
-                    </article>
-                </div>
-
-                <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#servicos" class="btn btn-primary">Conheça Nossos Serviços</a>
+                        <div class="about-cards">
+                            <article class="mini-card">
+                                <h3>Missão</h3>
+                                <p>Entregar serviços automotivos de alta qualidade com transparência e compromisso com o cliente.</p>
+                            </article>
+                            <article class="mini-card">
+                                <h3>Visão</h3>
+                                <p>Ser referência em manutenção veicular local, unindo tecnologia e atendimento premium.</p>
+                            </article>
+                            <article class="mini-card">
+                                <h3>Valores</h3>
+                                <p>Qualidade, honestidade, inovação e respeito ao cliente são os pilares da nossa rotina.</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="agendamento" class="section-spacing">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <section id="depoimentos" class="section-spacing testimonials">
+            <div class="container">
+                <div class="section-heading section-heading-centered" data-aos="fade-up">
+                    <span class="section-kicker">Clientes</span>
+                    <h2>Depoimentos</h2>
+                </div>
+
+                <div class="testimonial-grid">
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stars">★★★★★</div>
+                        <p>“Atendimento excelente, profissionalismo impecável e meu carro voltou como novo. Recomendo demais!”</p>
+                        <strong>— Carlos M.</strong>
+                    </article>
+
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stars">★★★★★</div>
+                        <p>“Fiz alinhamento e revisão geral. O serviço foi rápido, transparente e muito bem explicado.”</p>
+                        <strong>— Amanda R.</strong>
+                    </article>
+
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stars">★★★★★</div>
+                        <p>“Ambiente moderno, equipe atenciosa e qualidade de serviço acima do esperado. Vale muito a pena.”</p>
+                        <strong>— João P.</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="section-spacing booking-section">
+            <div class="container">
                 <div class="booking-box" data-aos="zoom-in">
-                    <div>
-                        <span class="section-kicker">Agendamento</span>
-                        <h2>Deixe seu carro em boas mãos</h2>
+                    <div class="booking-copy">
+                        <span class="section-kicker white">Agendamento</span>
+                        <h2>Pronto para cuidar do seu veículo com excelência?</h2>
                     </div>
                     <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn btn-primary">Solicitar Orçamento</a>
                 </div>
@@ -124,13 +219,13 @@
     </main>
 
     <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-aos="fade-up">
-        <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24">
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.548 4.138 1.582 5.93L0 24l6.254-1.645A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.154 16.322c-.267.8-.998 1.463-1.834 1.463-1.692 0-3.972-1.005-6.274-2.862-2.277-1.854-3.801-4.425-3.867-7.112-.04-1.584.482-2.681 1.546-3.524.258-.206.595-.323.936-.323h.584c.216 0 .457.157.565.387l.699 1.77c.129.326.036.77-.25 1.04l-.982 1.025c-.18.187-.23.45-.148.687.735 2.123 2.612 3.99 4.832 4.722.253.097.509.052.698-.145l.93-.963c.287-.292.706-.387 1.071-.255l1.674.764c.244.111.404.347.406.608l.009.636c.005.56-.324 1.084-.88 1.321z"/>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16.6 14.9c-.3-.1-1.7-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1a8.2 8.2 0 0 1-2.6-1.6c-.9-.9-1.5-2-1.7-2.3-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2 0-.3 0-.5a.9.9 0 0 0-.1-.5c-.1-.2-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.8.8-.8 2.1 0 1.3.9 2.4 1 2.6.1.2 2.6 4.4 6.6 6 .9.4 1.8.6 2.5.8.9.3 1.7.2 2.3.1.7-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.1-.2-.3-.3Z"/>
         </svg>
     </a>
 
     <footer id="contato" class="site-footer">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="container footer-inner">
             <p>Auto Center © 2025</p>
             <div class="footer-links">
                 <a href="tel:+5511999999999">(11) 99999-9999</a>
@@ -143,7 +238,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 700,
+            duration: 800,
             once: true
         });
     </script>
